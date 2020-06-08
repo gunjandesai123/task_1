@@ -1,0 +1,52 @@
+.mat-dialog-container#mat-dialog-1 {
+  // max-height: calc(100vh - 50px) !important;
+}
+.main_form{
+  height: calc(100vh - 160px);
+  overflow: auto;
+}
+.main_add_product {
+  width: 450px;
+}
+.field.check_box {
+  margin: 10px 0;
+}
+
+.field.readio_btn {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-around;
+}
+.check_box{
+  margin-right: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+.rd_btn{
+  margin-right: 10px;
+}
+.form_filed{
+  width: 100%;
+}
+.save_btn{
+  background-color:#007aff ;
+  color: white;
+}
+.dont_btn{
+  background-color: red;
+  color: white;
+}
+.selct_img{
+  background-color: #ccc;
+  margin-top: 10px;
+}
+.flie_selct{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.file_name{
+  background: #ccc;
+  padding: 10px;
+  border-radius: 10px;
+}

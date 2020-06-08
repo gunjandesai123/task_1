@@ -1,0 +1,75 @@
+
+<div class="main_add_product">
+<h2>{{dialogData.title}}</h2>
+
+  <form  class="main_form">
+    <div class="field">
+      <mat-form-field class="form_filed" appearance="outline">
+        <mat-label>Title</mat-label>
+        <input [(ngModel)]="title" name="title" matInput placeholder="Title">
+      </mat-form-field>
+    </div>
+    <div class="field">
+      <mat-label>Price Range</mat-label>
+      <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider>
+      <!-- <mat-form-field class="form_filed" appearance="outline">
+        <mat-label>Price</mat-label>
+        <input matInput placeholder="Price" [(ngModel)]="price" name="price">
+      </mat-form-field> -->
+    </div>
+    <div class="field">
+      <mat-form-field class="form_filed" appearance="outline">
+        <mat-label>Description</mat-label>
+        <textarea [(ngModel)]="description" name="description" matInput placeholder="Description"></textarea>
+      </mat-form-field>
+    </div>
+    <div class="field">
+      <mat-form-field class="form_filed" appearance="outline">
+        <mat-label>Rating</mat-label>
+        <input type="number" matInput placeholder="Please enter rate between 1 to 5 " [(ngModel)]="rating" name="rating">
+      </mat-form-field>
+    </div>
+    <!-- <div class="field">
+      <mat-form-field class="form_filed" appearance="outline">
+        <mat-label>Details Description</mat-label>
+        <textarea [(ngModel)]="detailsdescription" name="detailsdescription" matInput placeholder="Details Description"></textarea>
+      </mat-form-field>
+
+    </div> -->
+      <fieldset>
+      <legend>Location</legend>
+      <div class="field check_box">
+      <mat-checkbox *ngFor="let val of city let index = index" (change)="checkbox($event,index)" value="{{val.name}}" [(ngModel)]="val.value" name="{{val.name}}" class="check_box">{{val.name}}</mat-checkbox>
+      <!-- <mat-checkbox (change)="checkbox_2($event)" value="Surat" [(ngModel)]="location_2" name="location_2" class="check_box">Surat</mat-checkbox>
+      <mat-checkbox (change)="checkbox_3($event)" value="Junagadh" [(ngModel)]="location_3" name="location_3" class="check_box">Junagadh</mat-checkbox> -->
+    </div>
+    </fieldset>
+
+
+      <fieldset>
+        <legend>Stock</legend>
+        <div class="field readio_btn">
+      <mat-radio-group [(ngModel)]="stock" name="stock" aria-label="Select an option">
+        <mat-radio-button class="rd_btn" value="in stock">in stock</mat-radio-button>
+        <mat-radio-button class="rd_btn" value="out stock">out stock</mat-radio-button>
+      </mat-radio-group>
+    </div>
+    </fieldset>
+
+    <div class="field flie_selct">
+      <div *ngIf="fileName" class="file_name">
+        {{fileName}}
+      </div>
+      <input (change)="onFileInput($event,'')" #fileInput type="file"
+                          style="display:none;">
+      <button (click)="fileInput.click()"  class="selct_img" mat-button >Select Image</button>
+    </div>
+  </form>
+  <mat-dialog-actions style="clear: both;" align="end">
+    <button *ngIf="!isUpdatedata" (click)="saveData('save')" class="save_btn" mat-button >Save</button>
+    <button *ngIf="isUpdatedata" (click)="saveData('update')" class="save_btn" mat-button >Update</button>
+    <button  class="dont_btn" mat-button [mat-dialog-close]="false" cdkFocusInitial>Don't Save</button>
+  </mat-dialog-actions>
+
+
+</div>
