@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .main_content{
   display: flex;
   position: relative;
@@ -72,3 +73,79 @@ span.price_rate {
 .radio_stock{
   margin-bottom: 10px;
 }
+=======
+.main_content{
+  display: flex;
+  position: relative;
+  top: 75px;
+
+  // padding-left: 9%;
+}
+.main_filter {
+     /* width: 20%; */
+     background: white;
+     /* height: calc(100% - 85px); */
+    //  background: #cccc;
+     width: 250px;
+}
+span.price_rate {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  box-shadow: 2px 2px 2px #cccc;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 10px;
+  color: white;
+  background: #007aff;
+}
+.main_listing {
+  height: calc(100% - 85px);
+  background:white;
+  width: 100%;
+  overflow: auto;
+  padding-left: 5px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  grid-gap: 10px;
+  margin-top: 10px;
+}
+.chk_fliter{
+  padding: 10px 10px 5px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.imag_item{
+  height: 200px;
+}
+.example-card{
+  cursor: pointer;
+}
+.float_class{
+  position: fixed;
+    bottom: 10px;
+    right: 20px;
+    border-radius: 12px;
+    padding: 5px 40px;
+    background-color: #1ac6ff;
+    color: white;
+}
+.example-card{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.no_data h2{
+  position: fixed;
+    top: 50%;
+    left: 50%;
+}
+.stock_group{
+  display: flex;
+  flex-direction: column;
+}
+.radio_stock{
+  margin-bottom: 10px;
+}
+>>>>>>> 34c940b9973658a1ac9b56587ae3b47bf2d1f947

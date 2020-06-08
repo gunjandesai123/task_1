@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .main_header {
     position: fixed;
     left: 10%;
@@ -33,3 +34,40 @@ input.serch_input {
 .serach_icon{
   margin-left: 5px;
 }
+=======
+.main_header {
+    position: fixed;
+    left: 10%;
+    height: 75px;
+    width: 90%;
+    background: #007aff;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 10;
+    top: 0;
+
+}
+.search_div {
+  float: right;
+  width: 200px;
+  background: white;
+  height: 45%;
+  border-radius: 12px;
+  margin: 12px;
+  display: flex;
+  align-items: center;
+
+}
+input.serch_input {
+  border: none;
+  height: 90%;
+  width: 81%;
+  /* margin-left: 21px; */
+}
+.serch_input:focus{
+  outline: none;
+}
+.serach_icon{
+  margin-left: 5px;
+}
+>>>>>>> 34c940b9973658a1ac9b56587ae3b47bf2d1f947
