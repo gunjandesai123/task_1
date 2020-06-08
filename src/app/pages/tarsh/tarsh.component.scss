@@ -1,0 +1,25 @@
+.main_trash{
+  top: 75px;
+  position: absolute;
+  background: white;
+  /* width: 100%; */
+  overflow: auto;
+  padding-left: 5px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 10px;
+  margin-top: 10px;
+}
+.imag_item{
+  height: 200px;
+}
+.removed_card{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.no_record{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}

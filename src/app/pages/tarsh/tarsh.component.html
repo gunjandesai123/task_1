@@ -1,0 +1,21 @@
+<div class="main_trash">
+  <div *ngIf="trashList.length == 0" class="no_record">
+    <h2>There is no trash record found</h2>
+  </div>
+  <mat-card  class="removed_card" *ngFor="let val of trashList let index = index">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{val.title}}</mat-card-title>
+    </mat-card-header>
+    <img class="imag_item" mat-card-image src="{{val.imageUrl}}" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p style="word-wrap:break-word">
+       {{val.description}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button (click)="restoreList(val.index,val,index)" color="primary" mat-raised-button>Restore</button>
+      <button style="background:#ff4d4d; color: white;" (click)="removeList(val.index,val)"  mat-raised-button>Remove</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

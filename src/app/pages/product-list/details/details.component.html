@@ -1,0 +1,46 @@
+<div class="main_details">
+  <div (click)="backward()" class="_back_nav">
+    <mat-icon>keyboard_backspace</mat-icon>
+    <!-- <button color="accent" mat-raised-button>  <mat-icon>keyboard_backspace</mat-icon></button> -->
+  </div>
+  <div class="inner_content">
+    <div class="outer_img">
+      <lib-ngx-image-zoom class="image_wh"
+        [thumbImage]="myThumbnail"
+        [fullImage]="myFullresImage"
+        [magnification]="1"
+        [enableScrollZoom]="true"
+        [enableLens]="true"
+        [lensWidth]="250"
+        [circularLens]="true"
+        [lensHeight]="250"
+      ></lib-ngx-image-zoom>
+      <!-- <img class="image_wh"  src="{{data.image}}"> -->
+    </div>
+    <div class="details">
+      <h2>{{ data.title }}</h2>
+      <p class="test" >{{data.description}}</p>
+     <div class="other_details">
+      <span class="other_title">Price :</span>
+      <strong> ${{ data.price}}</strong>
+     </div>
+     <div class="other_details">
+      <span class="other_title">Stock :</span>
+      <strong> {{ data.stock}}</strong>
+     </div>
+     <div class="other_details">
+      <span class="other_title">Avilable Location :</span>
+      <strong> {{data.locations}}</strong>
+     </div>
+     <div class="other_details">
+      <span class="other_title">Rating :</span>
+      <strong> {{data.rating}}</strong>
+     </div>
+
+    </div>
+    <!-- <div class="details">
+
+    </div> -->
+
+  </div>
+</div>
