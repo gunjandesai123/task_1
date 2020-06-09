@@ -25,7 +25,7 @@ import { ToastrModule } from 'ngx-toastr';
   ],
   entryComponents:[ConfirmationDialogComponent],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
